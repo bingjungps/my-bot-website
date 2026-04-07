@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>智能助手</title>
+  <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.20/libs/cn/index.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    new CozeWebSDK.WebChatClient({
+      config: {
+        bot_id: '7608488480997851151',
+      },
+      auth: {
+        type: 'token',
+        token: 'pat_S7PJGNi3oNRgS2RKxBFAWWJUYyet6gpn63oTR0aQan660LTkNwYBpEqwjEgPISsd',
+        onRefreshToken: function () {
+          return 'pat_S7PJGNi3oNRgS2RKxBFAWWJUYyet6gpn63oTR0aQan660LTkNwYBpEqwjEgPISsd'
+        }
+      },
+      ui: {
+        base: {
+          layout: 'pc',
+          lang: 'zh-CN',
+        },
+        chatBot: {
+          title: '智能助手',
+          width: 600,
+        },
+        asstBtn: {
+          isNeed: true
+        }
+      }
+    });
+  </script>
+</body>
+</html>
